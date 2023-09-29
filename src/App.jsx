@@ -1,8 +1,8 @@
+import Navbar from "./components/Navbar"
+
 function App() {
   return (
-    <>
-      <h1>Dojo Blog</h1>
-    </>
+    <Navbar />
   )
 }
 
