@@ -15,10 +15,14 @@ const Home = () => {
     },
   ])
 
+  const handleDelete = ((id) => {
+    const newBlog = blogs.filter((blog) => blog.id !== id);
+    setBlogs(newBlog);
+  })
+
   return (
     <section>
-      <BlogList blogs={blogs} title={"All Blogs"} />
-      <BlogList blogs={blogs.filter((blog) => blog.author === "Luffy")} title={"Luffy's Blogs"} />
+      <BlogList blogs={blogs} title={"All Blogs"} handleDelete={handleDelete} />
     </section>
   )
 }
