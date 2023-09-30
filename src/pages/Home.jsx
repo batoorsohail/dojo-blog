@@ -1,4 +1,5 @@
 import { useState } from "react"
+import BlogList from "../components/BlogList"
 
 const Home = () => {
   
@@ -16,12 +17,7 @@ const Home = () => {
 
   return (
     <section className="flex flex-col items-center mt-20 gap-10">
-      {blogs.map((blog) => (
-        <div key={blog.id} className="px-5 py-3 w-2/3 border-b-white hover:shadow-lg">
-          <h2 className="text-red-500 font-bold text-2xl font-mono">{blog.title}</h2>
-          <p>Written by {blog.author}</p>
-        </div>
-      ))}
+      <BlogList />
     </section>
   )
 }
