@@ -16,8 +16,8 @@ const Home = () => {
   ])
 
   return (
-    <section className="flex flex-col items-center mt-20 gap-10">
-      <BlogList />
+    <section>
+      <BlogList blogs={blogs} />
     </section>
   )
 }
