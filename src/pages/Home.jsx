@@ -11,13 +11,14 @@ const Home = () => {
       title: 'Web Dev Tools', body: 'lorem ipsum...', author: 'Zorro', id: 2
     },
     {
-      title: 'JavaScript Best Practice', body: 'lorem ipsum...', author: 'Mihwak', id: 3
+      title: 'King of Pirates', body: 'lorem ipsum...', author: 'Luffy', id: 3
     },
   ])
 
   return (
     <section>
-      <BlogList blogs={blogs} />
+      <BlogList blogs={blogs} title={"All Blogs"} />
+      <BlogList blogs={blogs.filter((blog) => blog.author === "Luffy")} title={"Luffy's Blogs"} />
     </section>
   )
 }
