@@ -1,28 +1,28 @@
 import { useState } from "react"
 
 const Home = () => {
-  let [num, setNum] = useState(0);
-
-  const handleClick = () => {
-    setNum(num + 1);
-  }
-
-  const handleChange = () => {
-    setNum(num - 1);
-  }
+  
+  const [blogs, setBlogs] = useState([
+    {
+      title: 'My First Blog', body: 'lorem ipsum...', author: 'Luffy', id: 1
+    },
+    {
+      title: 'Web Dev Tools', body: 'lorem ipsum...', author: 'Zorro', id: 2
+    },
+    {
+      title: 'JavaScript Best Practice', body: 'lorem ipsum...', author: 'Mihwak', id: 3
+    },
+  ])
 
   return (
-    <div className="flex flex-col gap-5">
-      <p className="font-bold text-lg">{num}</p>
-      <div>
-        <button onClick={handleClick} className="px-5 py-2 bg-blue-600 text-white">
-          Increase Me
-        </button>
-        <button onClick={handleChange} className="px-5 py-2 bg-red-500 text-white">
-          Decrease Me
-        </button>
-      </div>
-    </div>
+    <section className="flex flex-col items-center mt-20 gap-10">
+      {blogs.map((blog) => (
+        <div key={blog.id}>
+          <h2>{blog.title}</h2>
+          <p>Written by {blog.author}</p>
+        </div>
+      ))}
+    </section>
   )
 }
 
