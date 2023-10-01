@@ -6,11 +6,6 @@ const Home = () => {
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
-  const handleDelete = ((id) => {
-    const newBlog = blogs.filter((blog) => blog.id !== id);
-    setBlogs(newBlog);
-  })
-
   useEffect(() => {
     fetch('http://localhost:3000/blogs')
       .then(res => {
@@ -34,7 +29,7 @@ const Home = () => {
     <section>
       {error && <p className="text-red-500 text-lg">{error}</p>}
       {isPending && <p>Loading...</p>}
-      {blogs && <BlogList blogs={blogs} title={"All Blogs"} handleDelete={handleDelete} />}
+      {blogs && <BlogList blogs={blogs} title={"All Blogs"} />}
     </section>
   )
 }
