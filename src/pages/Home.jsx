@@ -11,13 +11,19 @@ const Home = () => {
   })
 
   useEffect(() => {
-    fetch('http://localhost:3000/blogs')
+    fetch('http://localhost:3000/blogss')
       .then(res => {
+        if (!res.ok) {
+          throw Error ('Could not fetch the data for that resource')
+        }
         return res.json();
       })
       .then(data => {
         setBlogs(data);
         setIsPending(false);
+      })
+      .catch(err => {
+        console.log(err);
       })
   }, []);
 
