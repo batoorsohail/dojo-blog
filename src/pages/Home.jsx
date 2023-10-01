@@ -2,7 +2,8 @@ import { useState, useEffect } from "react"
 import BlogList from "../components/BlogList"
 
 const Home = () => {
-  const [blogs, setBlogs] = useState(null)
+  const [blogs, setBlogs] = useState(null);
+  const [isPending, setIsPending] = useState(true);
 
   const handleDelete = ((id) => {
     const newBlog = blogs.filter((blog) => blog.id !== id);
@@ -16,11 +17,13 @@ const Home = () => {
       })
       .then(data => {
         setBlogs(data);
+        setIsPending(false);
       })
   }, []);
 
   return (
     <section>
+      {isPending && <p>Loading...</p>}
       {blogs && <BlogList blogs={blogs} title={"All Blogs"} handleDelete={handleDelete} />}
     </section>
   )
