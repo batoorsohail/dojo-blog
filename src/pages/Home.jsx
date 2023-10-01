@@ -15,23 +15,24 @@ const Home = () => {
     },
   ])
 
-  const [name, setName] = useState("James")
-
   const handleDelete = ((id) => {
     const newBlog = blogs.filter((blog) => blog.id !== id);
     setBlogs(newBlog);
   })
 
   useEffect(() => {
-    console.log("use effect ran")
-    console.log(name)
-  }, [name]);
+    fetch('http://localhost:3000/blogs')
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        console.log(data)
+      })
+  }, []);
 
   return (
     <section>
       <BlogList blogs={blogs} title={"All Blogs"} handleDelete={handleDelete} />
-      <button onClick={() => setName("Jack")}>Change name</button>
-      <p>{name}</p>
     </section>
   )
 }
