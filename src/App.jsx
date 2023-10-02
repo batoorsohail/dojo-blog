@@ -1,5 +1,5 @@
-import Home from "./pages/Home"
-import Navbar from "./components/Navbar"
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <Navbar />
       <Home />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
