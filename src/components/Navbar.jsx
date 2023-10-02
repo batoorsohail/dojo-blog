@@ -8,7 +8,7 @@ const Navbar = () => (
         <Link to="/" className="text-lg hover:text-gray-500">Home</Link>
       </li>
       <li>
-        <Link href="/create" className="text-lg hover:text-gray-500">New Blog</Link>
+        <Link to="/create" className="text-lg hover:text-gray-500">New Blog</Link>
       </li>
     </ul>
   </nav>
