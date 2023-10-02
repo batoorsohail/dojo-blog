@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const BlogList = ({blogs, title}) => {
   return (
     <section className="flex flex-col justify-center items-center mt-20 gap-5 m-10">
@@ -11,5 +13,16 @@ const BlogList = ({blogs, title}) => {
     </section>
   )
 }
+
+BlogList.propTypes = {
+  blogs: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      content: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default BlogList
