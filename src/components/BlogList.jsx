@@ -20,7 +20,6 @@ BlogList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-      content: PropTypes.string.isRequired,
     }),
   ).isRequired,
   title: PropTypes.string.isRequired,
