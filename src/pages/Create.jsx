@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Create = () => {
+  const [ title, setTitle ] = useState('');
+  const [ body, setBody ] = useState('');
+  const [ author, setAuthor ] = useState('mario');
+ 
   return (
     <section className="flex flex-col justify-center items-center gap-5">
       <h2 className='text-3xl text-red-500 mt-14'>Add a New Blog</h2>
@@ -8,19 +12,32 @@ const Create = () => {
         <label>Blog Title:</label>
         <input 
           type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
           className='border rounded-sm px-2 py-1'
           required
         />
         <label>Blog Body:</label>
-        <textarea className='border rounded-sm px-2 py-1' required>
-
+        <textarea
+          value={body}
+          onChange={(e) => setBody(e.target.value)}
+          className='border rounded-sm px-2 py-1'
+          required
+        >
         </textarea>
         <label>Blog Author:</label>
-        <select className='border rounded-sm px-2 py-1'>
+        <select
+          value={author}
+          onChange={(e) => setAuthor(e.target.value)}
+          className='border rounded-sm px-2 py-1'
+        >
           <option value="mario">mario</option>
           <option value="yoshi">yoshi</option>
         </select>
         <button className='self-center bg-red-500 text-white w-20 rounded-md px-1 py-2'>Add Blog</button>
+        <p>{title}</p>
+        <p>{body}</p>
+        <p>{author}</p>
       </form>
     </section>
   )
