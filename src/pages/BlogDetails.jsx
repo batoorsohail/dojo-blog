@@ -7,8 +7,8 @@ const BlogDetails = () => {
 
   return (
     <section className="flex justify-center items-center">
-      { isPending && <div>Loading</div> }
-      { error && <div>{ error }</div> }
+      { isPending && <div className="mt-14 text-teal-500">Loading...</div> }
+      { error && <div className="text-red-500 font-bold mt-14">{ error }</div> }
       { blog && (
         <article className="flex flex-col gap-5 w-2/3 mt-14">
           <h2 className='text-2xl text-red-500'>{ blog.title }</h2>
