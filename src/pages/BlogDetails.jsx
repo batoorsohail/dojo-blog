@@ -1,9 +1,18 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import useFetch from "../components/useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
+
   const {data: blog, isPending, error} = useFetch('http://localhost:3000/blogs/' + id)
+  const handleClick = () => {
+    fetch('http://localhost:3000/blogs/' + blog.id, {
+      method: 'DELETE'
+    }).then(() => {
+      navigate('/')
+    })
+  }
 
   return (
     <section className="flex justify-center items-center">
@@ -14,6 +23,7 @@ const BlogDetails = () => {
           <h2 className='text-2xl text-red-500'>{ blog.title }</h2>
           <p>Written by { blog.author }</p>
           <p>{ blog.body }</p>
+          <button onClick={handleClick} className="bg-red-500 text-white rounded-lg w-1/12 px-1 py-2">Delete</button>
         </article>
       )}
     </section>
