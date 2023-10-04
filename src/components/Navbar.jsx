@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => (
   <nav className="px-40 py-5 flex justify-between items-center border-b">
