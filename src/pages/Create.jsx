@@ -56,9 +56,6 @@ const Create = () => {
         </select>
         { !isPending && <button type="submit" className="self-center bg-red-500 text-white w-20 rounded-md px-1 py-2">Add Blog</button> }
         { isPending && <button type="submit" className="self-center bg-red-500 text-white w-24 rounded-md px-1 py-2">Adding Blog...</button> }
-        <p>{title}</p>
-        <p>{body}</p>
-        <p>{author}</p>
       </form>
     </section>
   );
