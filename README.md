@@ -24,7 +24,7 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Crypto World <a name="about-project"></a>
+# 📖 Dojo Blog <a name="about-project"></a>
 
 **Dojo Blog is a website built with React and Tailwind CSS. It has three pages home page, a details page, and a new blog page.**
 
@@ -77,13 +77,13 @@ Clone this repository to your desired folder:
 
 ```sh
   cd <desired-folder>
-  git clone https://github.com/batoorsohail/shoe-city.git
+  git clone https://github.com/batoorsohail/dojo-blog.git
 ```
 
 ### Install <a name="install"></a>
 
 ```sh
-  cd shoe-city
+  cd dojo-blog
   npm install
 ```
 
@@ -117,7 +117,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank [JavaScript Mastery](https://www.youtube.com/watch?v=tS7upsfuxmo) YouTube channel for their amazing tutorial.
+I would like to thank everyone who helped me during this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
