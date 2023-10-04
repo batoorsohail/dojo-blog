@@ -4,11 +4,17 @@ const Create = () => {
   const [ title, setTitle ] = useState('');
   const [ body, setBody ] = useState('');
   const [ author, setAuthor ] = useState('mario');
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const blog = { title, body, author };
+    console.log(blog);
+  }
  
   return (
     <section className="flex flex-col justify-center items-center gap-5">
       <h2 className='text-3xl text-red-500 mt-14'>Add a New Blog</h2>
-      <form className='flex flex-col justify-center gap-3 w-1/3'>
+      <form onSubmit={handleSubmit} className='flex flex-col justify-center gap-3 w-1/3'>
         <label>Blog Title:</label>
         <input 
           type="text"
