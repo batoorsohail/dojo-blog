@@ -26,7 +26,7 @@
 
 # 📖 Crypto World <a name="about-project"></a>
 
-**Shoe City is a shoe-selling website that displays shoes, popular products, client feedback, and special offers.**
+**Dojo Blog is a website built with React and Tailwind CSS. It has three pages home page, a details page, and a new blog page.**
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,14 +42,14 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Shoed List**
-- **Popular Product**
+- **Adding new blog**
+- **Deleting blog**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[Live Demo](https://shoe-city.netlify.app/)
+[Live Demo](N/A)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
