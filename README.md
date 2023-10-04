@@ -1,12 +1,12 @@
 <a name="readme-top"></a>
 
-# Shoe City
+# Dojo Blog
 
 # 📗 Table of Contents
 
-- [Shoe City](#shoe-city)
+- [Dojo Blog](#dojo-blog)
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Space Travelers' Hub Project ](#-shoe-city-)
+- [📖 Dojo Blog Project ](#-dojo-blog-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
